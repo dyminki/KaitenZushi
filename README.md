@@ -5,6 +5,7 @@ Game of clicking appearing plates of sushi.
 - HTML
 - CSS
 - JAVASCRIPT
+- SVGs by me
 
 [Live DEMO](https://dyminki.github.io/KaitenZushi/)
 

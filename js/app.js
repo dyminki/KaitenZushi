@@ -15,14 +15,13 @@ document.addEventListener("DOMContentLoaded", function() {
     return Math.round(Math.random() * (max - min) + min);
   }
 
-  function randomPlate() {
+  function randomPlace() {
     let idx = Math.floor(Math.random() * thePlace.length);
     while (idx === lastPlace)  {
       idx = Math.floor(Math.random() * thePlace.length);
       console.log('>', idx, lastPlace)
     } 
     lastPlace = idx;
-
     return thePlace[idx];
   }
 
@@ -48,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function peep() {
     const time = randomTime(800, 1500);
-    const plate = randomPlate();
+    const plate = randomPlace();
     
     plate.classList.add('up');
     randomSushi(theSushi);
