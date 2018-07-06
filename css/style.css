@@ -105,13 +105,13 @@ html {
     position: relative;
   }
   
-  .plate {
+  .place {
     flex: 1 0 15%;
     overflow: hidden;
     position: relative;
   }
   
-  .plate:after {
+  .place:after {
     display: block;
     background-size:contain;
     content:'';
@@ -156,7 +156,7 @@ html {
     background:url('pink-sushi.svg') bottom center no-repeat;
   }
 
-  .plate.up .sushi {
+  .place.up .sushi {
     top: -7px;
   }
   

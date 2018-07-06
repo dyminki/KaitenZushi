@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  const thePlace = document.querySelectorAll('.plate');
+  const thePlace = document.querySelectorAll('.place');
   const scoreBoard = document.querySelector('.score');
   const theSushi = document.querySelectorAll('.sushi');
   const button = document.getElementsByClassName('btn')[0];
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log('>', idx, lastPlace)
     } 
     lastPlace = idx;
+
     return thePlace[idx];
   }
 
@@ -47,12 +48,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function peep() {
     const time = randomTime(800, 1500);
-    const plate = randomPlace();
+    const place = randomPlace();
     
-    plate.classList.add('up');
+    place.classList.add('up');
     randomSushi(theSushi);
     setTimeout(() => {
-      plate.classList.remove('up');
+      place.classList.remove('up');
       if (!timeUp) peep();
     }, time);
   }
