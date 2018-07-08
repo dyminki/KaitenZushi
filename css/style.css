@@ -1,181 +1,209 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-/*------------------------------*/
-/*---- Start ----*/
-/*------------------------------*/
-
-
+:root {
+  font-size: 10px;
+  --anim-speed : 0.4s
+}
 
 html {
-    box-sizing: border-box;
-    font-size: 10px;
-    background: #D2D2C3;
-    overflow: hidden;
-    font-family: 'Loved by the King', cursive;
-} 
+  box-sizing: border-box;
+  background: #D2D2C3;
+  overflow: hidden;
+  font-family: 'Loved by the King', cursive;
+}
 
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  .background {
-    top:0;
-    margin: -120px auto;
-    display: block;
-    width: 90em;
-    overflow: hidden;
-  }
+.background {
+  top: 0;
+  margin: -120px auto;
+  display: block;
+  width: 90em;
+  overflow: hidden;
+}
 
-  #tape {
-    left: 100px;
-    animation: move .5s infinite ease;
-  }
-  @keyframes move {
-    100% {
+button.btn {
+  width: 197px;
+  top: 4.6em;
+  left: 1em;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #3c3c3c;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  letter-spacing: 0.3em;
+  transition: 0.3s all;
+  font-family: 'Loved by the King', cursive;
+  z-index: 2;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+button:focus {
+  outline-color: #CECECE;
+}
+
+button.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.score {
+  display: block;
+  text-align: center;
+  width: 108px;
+  line-height: 1;
+  top: 3.2em;
+  left: 11.9em;
+  color: #3C3C3C;
+  position: relative;
+  font-size: 63px;
+}
+
+#tape {
+  left: 100px;
+}
+
+#tape.anim {
+  animation: move .5s infinite ease;
+}
+
+@keyframes move {
+  100% {
       transform: translateX(-5%);
-    }
   }
+}
 
-  .score {
-    display:block;
-    text-align: center;
-    width: 108px;
-    background:rgba(255,255,255,0.1);
-    line-height:1;
-    top: 2.7em;
-    left: 8.9em;
-    color: #cecece;
-    position: relative;
-    font-size: 80px;
-  }
-  
-  .game {
-    width:90%;
-    height:400px;
-    display:flex;
-    margin:0 auto;
-    top: -71em;
-    position: relative;
-  }
-  
-  .place {
-    flex: 1 0 15%;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .place:after {
-    display: block;
-    background-size:contain;
-    content:'';
-    width: 100%;
-    height:10px;
-    position: absolute;
-    z-index: 2;
-    bottom:0px;
-  }
-  
-  .sushi {
-    background-size:100%;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s;
-    background-position: center bottom;
-  }
-  
-  .sushi0 {
-    background:url('orange-sushi.svg') bottom center no-repeat;
-  }
+.game {
+  width: 90%;
+  height: 397px;
+  display: flex;
+  margin: 0 auto;
+  top: -71em;
+  position: relative;
+}
 
-  .sushi1 {
-    background:url('blue-sushi.svg') bottom center no-repeat;
-  }
+.place {
+  flex: 1 0 15%;
+  overflow: hidden;
+  position: relative;
+  height: 397px;
+  transition: 0s var(--anim-speed) height;
+}
 
-  .sushi2 {
-    background:url('black-sushi.svg') bottom center no-repeat;
-  }
+.sushi {
+  background-size: 100%;
+  position: absolute;
+  top: 397px;
+  width: 100%;
+  height: 85px;
+  background-position: center bottom;
+  cursor: pointer;
+}
 
-  .sushi3 {
-    background:url('green-sushi.svg') bottom center no-repeat;
-  }
+.place.up {
+  height:470px;
+}
 
-  .sushi4 {
-    background:url('yellow-sushi.svg') bottom center no-repeat;
-  }
+.place.up .sushi {
+  animation: up calc(var(--anim-speed) * 2) 0s 1 forwards;
+}
 
-  .sushi5 {
-    background:url('pink-sushi.svg') bottom center no-repeat;
+@keyframes up {
+  50% {
+      top: 307px;
   }
+  100% {
+      top: 367px;
+  }
+}
 
-  .place.up .sushi {
-    top: -7px;
-  }
-  
-  button.btn {
-    width: 183px;
-    top: 2.6em;
-    left: 0.8em;
-    border: none;
-    font-size: 50px;
-    cursor: pointer;
-    color: #cecece;
-    background:rgba(255,255,255,0.1);
-    position: relative;
-    letter-spacing: 0.3em;
-    
-    font-family: 'Loved by the King', cursive;
-    z-index: 2;
-  }
+.place.down {
+  height:397px;
+}
 
-  button:focus {
-    outline-color: #cecece;
+.place.down .sushi {
+  animation: down calc(var(--anim-speed) * 2) 0s 1 forwards;
+}
+
+@keyframes down {
+  0% {
+      top: 367px;
   }
+  50% {
+      top: 307px;
+  }
+  100% {
+      top: 400px;
+  }
+}
+
+.sushi0 {
+  background: url('../images/orange-sushi.svg') bottom center no-repeat;
+}
+
+.sushi1 {
+  background: url('../images/blue-sushi.svg') bottom center no-repeat;
+}
+
+.sushi2 {
+  background: url('../images/black-sushi.svg') bottom center no-repeat;
+}
+
+.sushi3 {
+  background: url('../images/green-sushi.svg') bottom center no-repeat;
+}
+
+.sushi4 {
+  background: url('../images/yellow-sushi.svg') bottom center no-repeat;
+}
+
+.sushi5 {
+  background: url('../images/pink-sushi.svg') bottom center no-repeat;
+}
+
+.container {
+  position:relative;
+}
+
+.plate{
+  position: absolute;
+  height: 49px;
+  width: 90px;
+  left: -61em;
+}
+
+.orange-plate {
+  background: url('../images/orange-plate.svg') center no-repeat;
+}
+
+.blue-plate {
+  background: url('../images/blue-plate.svg') center no-repeat;
+}
+
+.black-plate {
+  background: url('../images/black-plate.svg') center no-repeat;
+}
+
+.green-plate {
+  background: url('../images/green-plate.svg') center no-repeat;
+}
+
+.yellow-plate {
+  background: url('../images/yellow-plate.svg') center no-repeat;
+}
+
+.pink-plate {
+  background: url('../images/pink-plate.svg') center no-repeat;
+}
+
+.over {
+  top: 2.5em;
+  left: 1em;
+  font-size: 14em;
+  position: absolute;
+  color: #3C3C3C;
+}
