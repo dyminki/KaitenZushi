@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
       clearTimeout(timeBetweenUpDown);
       timeBetweenUpDown = setTimeout(() => {
           element.classList.add('down');
-      }, 300); 
+      }, 200); 
   }
  
   function endDown(element) {
@@ -127,7 +127,11 @@ document.addEventListener("DOMContentLoaded", function() {
       scoreBoard.textContent = 0;
       timeUp = false;
       score = 0;
+      positionOfPlate = 57;
       over.style.display = "none";
+      while (container.firstChild) {
+          container.removeChild(container.firstChild);
+      }
       document.querySelector('#tape').classList.add('anim');
       setTimeout(() => peep(), 1000);
       setTimeout(() => timeUp = true, 30000);
