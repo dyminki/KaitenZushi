@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const container = document.querySelector('.container');
+  const pointer = document.getElementById('pointer');
   const thePlace = document.querySelectorAll('.place');
   const scoreBoard = document.querySelector('.score');
   const theSushi = document.querySelectorAll('.sushi');
@@ -74,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
           document.querySelector('#tape').classList.remove('anim');
           over.style.display = "block";
+          pointer.classList.remove('pointer-anim');
           button.disabled = false;
       }
   }
@@ -132,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
       while (container.firstChild) {
           container.removeChild(container.firstChild);
       }
+      pointer.classList.add('pointer-anim');
       document.querySelector('#tape').classList.add('anim');
       setTimeout(() => peep(), 1000);
       setTimeout(() => timeUp = true, 30000);

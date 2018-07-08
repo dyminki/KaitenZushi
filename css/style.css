@@ -4,7 +4,7 @@
 
 :root {
   font-size: 10px;
-  --anim-speed : 0.4s
+  --anim-speed : 0.3s
 }
 
 html {
@@ -21,9 +21,11 @@ html {
   width: 90em;
   overflow: hidden;
 }
+
 svg {
   font-family: 'Covered By Your Grace', cursive;
 }
+
 button.btn {
   width: 197px;
   top: 4.6em;
@@ -77,6 +79,63 @@ button.btn:disabled {
   100% {
       transform: translateX(-5%);
   }
+}
+
+#elipse {
+  height: 1px;
+  width: 52px;
+  position: relative;
+  top: 10em;
+  left: 67.7em;
+}
+
+#elipse #pointer {
+  background-color: #676767;
+  display: block;
+  height: 26px;
+  width: 4px;
+  border-radius: 2px;
+  top: -8em;
+  left: 1.9em;
+  position: absolute;
+} 
+
+.pointer-anim {
+  transform-origin: 100px 50px; 
+-webkit-animation: rotate 31.5s infinite linear;
+-webkit-transform-origin: left bottom;
+-moz-animation: rotate 31.5s infinite linear;
+-moz-transform-origin: left bottom;
+-ms-animation: rotate 31.5s infinite linear;
+-ms-transform-origin: left bottom;
+-o-animation: rotate 31.5s infinite linear;
+-o-transform-origin: left bottom; 
+animation: rotate 31.5s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+0% { -webkit-transform: rotate(0deg);}
+100% { -webkit-transform: rotate(360deg);}
+}	
+
+@-moz-keyframes rotate {
+0% { -moz-transform: rotate(0deg);}
+100% { -moz-transform: rotate(360deg);}
+}	
+
+@-ms-keyframes rotate {
+0% { -ms-transform: rotate(0deg);}
+100% { -ms-transform: rotate(360deg);}
+}	
+
+@-o-keyframes rotate {
+0% { -o-transform: rotate(0deg);}
+100% { -o-transform: rotate(360deg);}
+}	
+
+@keyframes rotate {
+0% { transform: rotate(0deg);}
+100% { transform: rotate(360deg);}
 }
 
 .game {
