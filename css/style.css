@@ -21,7 +21,9 @@ html {
   width: 90em;
   overflow: hidden;
 }
-
+svg {
+  font-family: 'Covered By Your Grace', cursive;
+}
 button.btn {
   width: 197px;
   top: 4.6em;
