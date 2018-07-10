@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
       clearTimeout(timeBetweenUpDown);
       timeBetweenUpDown = setTimeout(() => {
           element.classList.add('down');
-      }, 200); 
+      }, 300); 
   }
  
   function endDown(element) {
