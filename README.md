@@ -4,7 +4,7 @@ Game of clicking appearing plates of sushi.
 # Technologies used
 - HTML
 - CSS
-- JAVASCRIPT
+- JavaScript
 
 ## SVGs by me
 
