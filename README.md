@@ -1,14 +1,16 @@
 # Kaiten Zushi
 Game of clicking appearing plates of sushi.
 
-### **Build with**
+# Technologies used
 - HTML
 - CSS
 - JAVASCRIPT
-- SVGs by me
+
+## SVGs by me
 
 [Live DEMO](https://dyminki.github.io/KaitenZushi/)
 
-### Screenshoot
+# Screenshoot
+
 ![Image](https://github.com/dyminki/KaitenZushi/blob/master/kaiten.jpg)
 
