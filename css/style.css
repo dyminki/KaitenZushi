@@ -1,17 +1,19 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 :root {
   font-size: 10px;
-  --anim-speed : 0.3s
+  --anim-speed: 0.3s;
 }
 
 html {
   box-sizing: border-box;
-  background: #D2D2C3;
+  background: #d2d2c3;
   overflow: hidden;
-  font-family: 'Loved by the King', cursive;
+  font-family: "Loved by the King", cursive;
 }
 
 .background {
@@ -23,7 +25,7 @@ html {
 }
 
 svg {
-  font-family: 'Covered By Your Grace', cursive;
+  font-family: "Covered By Your Grace", cursive;
 }
 
 button.btn {
@@ -38,7 +40,7 @@ button.btn {
   position: relative;
   letter-spacing: 0.3em;
   transition: 0.3s all;
-  font-family: 'Loved by the King', cursive;
+  font-family: "Loved by the King", cursive;
   z-index: 2;
 }
 
@@ -47,7 +49,7 @@ button:hover {
 }
 
 button:focus {
-  outline-color: #CECECE;
+  outline-color: #cecece;
 }
 
 button.btn:disabled {
@@ -62,7 +64,7 @@ button.btn:disabled {
   line-height: 1;
   top: 3.2em;
   left: 11.9em;
-  color: #3C3C3C;
+  color: #3c3c3c;
   position: relative;
   font-size: 63px;
 }
@@ -72,12 +74,12 @@ button.btn:disabled {
 }
 
 #tape.anim {
-  animation: move .5s infinite ease;
+  animation: move 0.5s infinite ease;
 }
 
 @keyframes move {
   100% {
-      transform: translateX(-5%);
+    transform: translateX(-5%);
   }
 }
 
@@ -98,44 +100,64 @@ button.btn:disabled {
   top: -8em;
   left: 1.9em;
   position: absolute;
-} 
+}
 
 .pointer-anim {
-  transform-origin: 100px 50px; 
--webkit-animation: rotate 31.5s infinite linear;
--webkit-transform-origin: left bottom;
--moz-animation: rotate 31.5s infinite linear;
--moz-transform-origin: left bottom;
--ms-animation: rotate 31.5s infinite linear;
--ms-transform-origin: left bottom;
--o-animation: rotate 31.5s infinite linear;
--o-transform-origin: left bottom; 
-animation: rotate 31.5s infinite linear;
+  transform-origin: 100px 50px;
+  -webkit-animation: rotate 31.5s infinite linear;
+  -webkit-transform-origin: left bottom;
+  -moz-animation: rotate 31.5s infinite linear;
+  -moz-transform-origin: left bottom;
+  -ms-animation: rotate 31.5s infinite linear;
+  -ms-transform-origin: left bottom;
+  -o-animation: rotate 31.5s infinite linear;
+  -o-transform-origin: left bottom;
+  animation: rotate 31.5s infinite linear;
 }
 
 @-webkit-keyframes rotate {
-0% { -webkit-transform: rotate(0deg);}
-100% { -webkit-transform: rotate(360deg);}
-}	
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
 
 @-moz-keyframes rotate {
-0% { -moz-transform: rotate(0deg);}
-100% { -moz-transform: rotate(360deg);}
-}	
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
 
 @-ms-keyframes rotate {
-0% { -ms-transform: rotate(0deg);}
-100% { -ms-transform: rotate(360deg);}
-}	
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+  }
+}
 
 @-o-keyframes rotate {
-0% { -o-transform: rotate(0deg);}
-100% { -o-transform: rotate(360deg);}
-}	
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+  }
+}
 
 @keyframes rotate {
-0% { transform: rotate(0deg);}
-100% { transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .game {
@@ -166,7 +188,7 @@ animation: rotate 31.5s infinite linear;
 }
 
 .place.up {
-  height:470px;
+  height: 470px;
 }
 
 .place.up .sushi {
@@ -175,15 +197,15 @@ animation: rotate 31.5s infinite linear;
 
 @keyframes up {
   50% {
-      top: 307px;
+    top: 307px;
   }
   100% {
-      top: 367px;
+    top: 367px;
   }
 }
 
 .place.down {
-  height:397px;
+  height: 397px;
 }
 
 .place.down .sushi {
@@ -192,45 +214,45 @@ animation: rotate 31.5s infinite linear;
 
 @keyframes down {
   0% {
-      top: 367px;
+    top: 367px;
   }
   50% {
-      top: 307px;
+    top: 307px;
   }
   100% {
-      top: 400px;
+    top: 400px;
   }
 }
 
 .sushi0 {
-  background: url('../images/orange-sushi.svg') bottom center no-repeat;
+  background: url("../images/orange-sushi.svg") bottom center no-repeat;
 }
 
 .sushi1 {
-  background: url('../images/blue-sushi.svg') bottom center no-repeat;
+  background: url("../images/blue-sushi.svg") bottom center no-repeat;
 }
 
 .sushi2 {
-  background: url('../images/black-sushi.svg') bottom center no-repeat;
+  background: url("../images/black-sushi.svg") bottom center no-repeat;
 }
 
 .sushi3 {
-  background: url('../images/green-sushi.svg') bottom center no-repeat;
+  background: url("../images/green-sushi.svg") bottom center no-repeat;
 }
 
 .sushi4 {
-  background: url('../images/yellow-sushi.svg') bottom center no-repeat;
+  background: url("../images/yellow-sushi.svg") bottom center no-repeat;
 }
 
 .sushi5 {
-  background: url('../images/pink-sushi.svg') bottom center no-repeat;
+  background: url("../images/pink-sushi.svg") bottom center no-repeat;
 }
 
 .container {
-  position:relative;
+  position: relative;
 }
 
-.plate{
+.plate {
   position: absolute;
   height: 49px;
   width: 90px;
@@ -238,27 +260,27 @@ animation: rotate 31.5s infinite linear;
 }
 
 .orange-plate {
-  background: url('../images/orange-plate.svg') center no-repeat;
+  background: url("../images/orange-plate.svg") center no-repeat;
 }
 
 .blue-plate {
-  background: url('../images/blue-plate.svg') center no-repeat;
+  background: url("../images/blue-plate.svg") center no-repeat;
 }
 
 .black-plate {
-  background: url('../images/black-plate.svg') center no-repeat;
+  background: url("../images/black-plate.svg") center no-repeat;
 }
 
 .green-plate {
-  background: url('../images/green-plate.svg') center no-repeat;
+  background: url("../images/green-plate.svg") center no-repeat;
 }
 
 .yellow-plate {
-  background: url('../images/yellow-plate.svg') center no-repeat;
+  background: url("../images/yellow-plate.svg") center no-repeat;
 }
 
 .pink-plate {
-  background: url('../images/pink-plate.svg') center no-repeat;
+  background: url("../images/pink-plate.svg") center no-repeat;
 }
 
 .over {
@@ -266,5 +288,5 @@ animation: rotate 31.5s infinite linear;
   left: 1em;
   font-size: 14em;
   position: absolute;
-  color: #3C3C3C;
+  color: #3c3c3c;
 }
