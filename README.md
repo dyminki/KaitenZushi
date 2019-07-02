@@ -1,5 +1,7 @@
 # Kaiten Zushi
-Game of clicking appearing plates of sushi.
+Game of clicking appearing plates of sushi.  
+
+[Live DEMO](https://dyminki.github.io/KaitenZushi/)
 
 # Technologies used
 - HTML
@@ -8,8 +10,6 @@ Game of clicking appearing plates of sushi.
 
 ## SVGs
 - by me
-
-[Live DEMO](https://dyminki.github.io/KaitenZushi/)
 
 # Screenshoot
 
